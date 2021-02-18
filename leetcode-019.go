@@ -6,7 +6,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	}
 	newHead := &ListNode{Next: head}
 	f, s := head, newHead
-	for i:=0; i<n; i++ {
+	for i := 0; i < n; i++ {
 		f = f.Next
 	}
 	for f != nil {

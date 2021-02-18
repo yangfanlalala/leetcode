@@ -1,7 +1,7 @@
 package main
 
 func letterCombinations(digits string) []string {
-	xMap := map[byte][]byte	{
+	xMap := map[byte][]byte{
 		'2': {'a', 'b', 'c'},
 		'3': {'d', 'e', 'f'},
 		'4': {'g', 'h', 'i'},
@@ -20,12 +20,12 @@ func letterCombinations(digits string) []string {
 			t := make([]byte, len(tmp), len(tmp))
 			copy(t, tmp)
 			result = append(result, string(t))
-			return 
+			return
 		}
 		x := xMap[digits[i]]
 		for _, b := range x {
-			tmp = append(tmp, b) 
-			combine(i+1)
+			tmp = append(tmp, b)
+			combine(i + 1)
 			tmp = tmp[:len(tmp)-1]
 		}
 	}
